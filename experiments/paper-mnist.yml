@@ -1,0 +1,13 @@
+dataset: 'mnist'
+model: 
+  name: 'paper_cnn'
+  fit_kwargs:
+    epochs: 50
+    batch_size: 64
+submodels:
+  - name: 'mnist_linear'
+    fit_kwargs:
+      epochs: 100
+      batch_size: 64
+plot:
+  submodels_names: ['linear']

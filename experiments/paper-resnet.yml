@@ -1,0 +1,34 @@
+dataset: "cifar10_first"
+model: 
+  name: 'paper_resnet'
+  model_kwargs:
+    num_blocks: [3,3,3]
+  fit_kwargs:
+    epochs: 100
+    batch_size: 128
+submodels:
+  - name: 'paper_resnet'
+    model_kwargs:
+      num_blocks: [1]
+    fit_kwargs:
+      epochs: 100
+      batch_size: 128
+  - name: 'paper_resnet'
+    model_kwargs:
+      num_blocks: [2]
+    fit_kwargs:
+      epochs: 100
+      batch_size: 128
+  - name: 'paper_resnet'
+    model_kwargs:
+      num_blocks: [3]
+    fit_kwargs:
+      epochs: 100
+      batch_size: 128
+plot:
+  submodels_names: 
+    - 'CNN2'
+    - 'CNN4'
+    - 'CNN6'
+
+submodels_training_strategy: 'predictions at infinity'

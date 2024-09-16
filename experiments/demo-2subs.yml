@@ -1,0 +1,17 @@
+dataset: 'mnist'
+model: 
+  name: 'mnist_demo'
+  model_kwargs:
+    lr: 0.001
+  fit_kwargs:
+    epochs: 20
+    batch_size: 64
+submodels:
+  - name: 'mnist_linear'
+  - name: 'mnist_demo_sub'
+    fit_kwargs:
+      epochs: 15
+      batch_size: 64
+plot:
+  submodels_names: ['linear', '1 conv layer']
+

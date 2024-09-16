@@ -1,0 +1,8 @@
+tensorflow[and-cuda]
+matplotlib
+ipykernel
+pydot
+pytest
+pydantic
+pyyaml
+keras-cv
